@@ -1,0 +1,80 @@
+.sidebarContainer {
+    /* width: 280px; */
+    color: #000000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 2px;
+    padding:1.2em 0.5em;
+    height: 95vh;
+    position: sticky;
+    left: 0;
+    top: 0;
+    transition: width 0.2s ease;
+    overflow-y: scroll;
+    
+}
+
+.collapsed {
+    width: 40px;
+}
+
+.expanded {
+    width: 280px;
+}
+.collapseIcon{
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  margin-bottom: 1em;
+
+}
+.collapseIcon_collapsed{
+    justify-content: center;
+}
+
+.sidebarBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    
+}
+
+
+/* .sidebarBox:hover {
+    background: rgb(116, 134, 137);
+    color: #ffffff;
+} */
+
+.navItem {
+    text-align: left;
+    margin: 0em;
+    font-size: 14px;
+}
+
+.sidebarDivwithIcons {
+    display: flex;
+    justify-content: flex-start;
+    gap: .5em;
+    align-items: center;
+    padding: .5em;
+    border-radius: 4px;
+    width: 100%;
+}
+.sidebarDivwithIcons:hover {
+    background: #e2c8ff;
+    color: #ffffff;
+}
+.activeMenu{
+    background: #b87aff;
+    color: white;
+}
+.sidebar_icon{
+    width: 16px;
+}
+.sidebarDivwithIcons:hover .sidebar_icon{
+    filter: invert(1);
+}
+.sidebarBox:has(.activeMenu) .sidebar_icon {
+    filter: invert(1)
+  }

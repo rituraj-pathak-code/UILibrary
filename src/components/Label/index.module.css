@@ -1,0 +1,126 @@
+.defaultBtnDiv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.normalSize {
+    font-size: .9em;
+    padding: .4em .8em;
+    gap: 5px;
+}
+.smallSize {
+    font-size: .7em;
+    padding: .4em .6em;
+    gap: 4px;
+}
+.largeSize {
+    font-size: 1.2em;
+    padding: .6em .9em;
+    gap: 10px;
+}
+.normalImg {
+    height: 10px;
+    width:10px;
+    margin-top: 2px;
+    border-radius: 50%;
+}
+
+.smallImg {
+    height: 10px;
+    width:10px;
+    margin-top: 1px;
+    border-radius: 50%;
+}
+
+.largeImg {
+    height: 20px;
+    width:20px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.normal {
+    border-radius: 2px;
+}
+
+.rounded {
+    border-radius: 6px;
+}
+
+.oval {
+    border-radius: 24px;
+}
+
+.defaultBtnDes {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: inherit;
+    outline: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+}
+
+.primary {
+    background: #D0D1FB;
+    color: #4447EE;
+}
+
+
+
+.secondary {
+    background: #EBEBEB;
+    color: #121212;
+}
+
+.success {
+    background: #36AB6D;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.success:hover {
+    background: #8BDAB0;
+    cursor: pointer;
+}
+
+.danger {
+    background: #CD2026;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.danger:hover {
+    background: #EA7B7E;
+    cursor: pointer;
+}
+
+.warning {
+    background: #BE9429;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.warning:hover {
+    background: #E4C881;
+    cursor: pointer;
+}
+
+.disabled {
+    background: #FFFFFF;
+    color: #c3c3c3;
+}
+

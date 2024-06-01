@@ -1,0 +1,127 @@
+.defaultBtnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border: none;
+}
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.normalSize {
+    font-size: .9em;
+    padding: .4em .8em;
+    gap: 5px;
+}
+.smallSize {
+    font-size: .7em;
+    padding: .5em .6em;
+    gap: 4px;
+}
+.largeSize {
+    font-size: 1.1em;
+    padding: .5em .9em;
+    gap: 10px;
+}
+.normalImg {
+    width:15px;
+}
+
+.smallImg {
+    height: 10px;
+    width:10px;
+}
+
+.largeImg {
+    width:20px;
+}
+
+.normal {
+    border-radius: 2px;
+}
+
+.rounded {
+    border-radius: 6px;
+}
+
+.oval {
+    border-radius: 24px;
+}
+
+
+
+.primary {
+    background: #b87aff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.primary:hover {
+    background: #6c4598 !important;
+    cursor: pointer;
+    box-shadow: #b87aff 0px 10px 10px -10px;
+    
+}
+
+.secondary {
+    background: #ffffff;
+    color: #b87aff;
+    cursor: pointer;
+}
+
+.secondary:hover {
+    background: #b87aff;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: #b87aff 0px 10px 10px -10px;
+}
+
+.success {
+    background: #36AB6D;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.success:hover {
+    background: #1f633f;
+    cursor: pointer;
+    box-shadow: #36AB6D 0px 10px 10px -10px;
+}
+
+.danger {
+    background: #CD2026;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.danger:hover {
+    background: #880e12;
+    cursor: pointer;
+    box-shadow: #CD2026 0px 10px 10px -10px;
+
+}
+
+.warning {
+    background: #BE9429;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.warning:hover {
+    background: #5e470c;
+    cursor: pointer;
+    box-shadow: #BE9429 0px 10px 10px -10px;
+
+}
+
+.disabled {
+    background: #FFFFFF;
+    color: #c3c3c3;
+}
+
+

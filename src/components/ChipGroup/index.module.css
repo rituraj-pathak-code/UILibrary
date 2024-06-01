@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.button{
+    width: 73px;
+    height: 32px;
+    background-color: white;
+    border: 1px solid #1454CC;
+    color: #1454CC;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.container {
+  background: hsla(20, 75%, 98%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(20, 75%, 98%, 1) 0%,
+    hsla(204, 22%, 95%, 1) 50%,
+    hsla(180, 20%, 98%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(20, 75%, 98%, 1) 0%,
+    hsla(204, 22%, 95%, 1) 50%,
+    hsla(180, 20%, 98%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(20, 75%, 98%, 1) 0%,
+    hsla(204, 22%, 95%, 1) 50%,
+    hsla(180, 20%, 98%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FEFAF8", endColorstr="#F1F4F6", GradientType=1 );
+  
+}

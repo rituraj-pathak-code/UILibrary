@@ -1,0 +1,73 @@
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.container{
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 4px;
+    width: 254px;
+    padding: 12px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:16px;
+    align-items: center;
+    animation: openAnimation 0.25s ease-out ;
+}
+.container_with_image{
+    min-height: 300px;
+}
+.container_without_image{
+    min-height: 220px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.content>h1{
+    margin: 0;
+    font-size: 16px;
+}
+.content>p{
+    margin: 0;
+    font-size: 16px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.popup_image{
+    width: 250px;
+}
+
+@keyframes openAnimation {
+    0%{
+        transform: scale(0);
+    }
+    60%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(0.95);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+

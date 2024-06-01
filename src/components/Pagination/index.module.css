@@ -1,0 +1,103 @@
+.container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.items{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    
+}
+.items_dark{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    color: white;
+}
+.items:hover{
+    background-color: #eeeeee;
+}
+.items_dark:hover{
+    background-color: #4a4a4a;
+
+}
+.disabled{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    color: gray
+}
+.defaultType,.defaultType:hover{
+    background-color: rgb(112, 112, 112);
+    color: white;
+}
+.disabledType, .disabledType:hover{
+    background-color: rgb(196, 196, 196);
+    color: gray;
+}
+.primary , .primary:hover{
+    background-color: #6365f16f;
+}
+
+.secondary, .secondary:hover{
+    background-color: #BE9429;
+    color: white;
+   
+}
+
+
+.rounded {
+    border-radius: 50%;
+}
+.large{
+    width: 38px;
+    height: 38px;
+}
+.small{
+    width: 24px;
+    height: 24px;
+    font-size: 0.8em;
+}
+.itemOutlined{
+    border: 1px solid rgb(88, 88, 88);
+}
+
+/* DARK */
+
+
+
+
+
+.arrows{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+

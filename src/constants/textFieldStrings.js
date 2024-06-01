@@ -1,0 +1,5 @@
+export const primaryTextField = '<TextField type="text" placeholder="Enter here"/>\n'
+export const passwordTextField = '<TextField type="password" placeholder="Enter here"/>\n'
+export const successTextField = '<TextField type="text" placeholder="Enter here" color="success"/>\n'
+export const warningTextField = '<TextField type="text" placeholder="Enter here" color="warning"/>\n'
+export const errorTextField = '<TextField type="text" placeholder="Enter here" color="error" errorMessage="Username unavailable"/>\n'

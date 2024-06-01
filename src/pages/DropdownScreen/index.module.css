@@ -1,0 +1,11 @@
+.dropdowns{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+.dropdownContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}

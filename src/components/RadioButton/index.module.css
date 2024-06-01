@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .small{
+    font-size: 15px;
+    padding-left: 25px;
+    
+  }
+  .large{
+    font-size: 22px;
+    padding-left: 35px;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .radiomark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 3px solid #D0D1FB
+
+  }
+  .radio_large{
+     height: 22px;
+    width: 22px;
+  }
+  .radio_small{
+    height: 13px;
+   width: 13px;
+ }
+ .radio_normal{
+  height: 17px;
+  width: 17px;
+ }
+  .primary{
+    border: 3px solid #A1A3F7
+  }
+  .error{
+    border: 3px solid #CD2026
+  }
+  .disabled{
+    border: 3px solid #DBDBDB;
+  }
+  .success{
+    border: 3px solid green
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .radiomark {
+    background-color: #ccc;
+  }
+  
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .radiomark {
+    background-color: #2196F3;
+    border: 3px solid #2196F3
+  }
+  .container input:checked ~ .error {
+    background-color: #CD2026;
+    border: 3px solid #CD2026
+  }
+  .container input:checked ~ .success {
+    background-color: green;
+    border: 3px solid green
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .radiomark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .radiomark:after {
+    border-radius: 50%;
+    background: white;
+  }
+  .container .radio_large:after{
+        top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+  }
+  .container .radio_small:after{
+    top: 2px;
+left: 1.5px;
+width: 10px;
+height: 10px;
+}
+.container .radio_normal:after{
+  top: 2px;
+    left: 1.7px;
+    width: 13px;
+    height: 13px;
+}
+  

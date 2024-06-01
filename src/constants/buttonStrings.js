@@ -1,0 +1,8 @@
+export const primaryButton = '<Button type = "primary" borderRadius = "normal" size="normal">Submit</Button>\n'
+export const secondaryButton = '<Button type="secondary" borderRadius="normal" size="normal">Submit</Button>\n'
+export const successButton = '<Button type = "success" borderRadius = "normal" size="normal">Submit</Button>\n'
+export const dangerButton = '<Button type = "danger" borderRadius = "normal" size="normal">Submit</Button>\n'
+export const warningButton = '<Button type = "danger" borderRadius = "normal" size="normal">Submit</Button>\n'
+export const disabledButton = '<Button type = "disabled" borderRadius = "normal" size="normal">Submit</Button>\n'
+export const buttonWithStartIcon = '<Button type="danger" startIcon={trashIcon} borderRadius="normal" size="normal">Delete</Button>\n'
+export const buttonWithEndIcon = '<Button type="primary" endIcon={sendIcon} borderRadius="normal" size="normal">Submit</Button>\n'

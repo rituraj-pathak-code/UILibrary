@@ -1,0 +1,1 @@
+export const basicPagination = '<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler}/>\n<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} shape="rounded"/>,'

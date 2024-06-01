@@ -1,0 +1,9 @@
+.checkContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+.checks{
+    display: flex;
+    gap: 3em;
+}
