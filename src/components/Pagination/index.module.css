@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-family: "Open Sans", sans-serif;
 }
 .items{
     width: 30px;
@@ -80,11 +81,28 @@
     height: 24px;
     font-size: 0.8em;
 }
-.itemOutlined{
+.itemOutlined_{
     border: 1px solid rgb(88, 88, 88);
 }
+.itemOutlined_primary{
+    border: 1px solid #6365f16f;
+}
+.itemOutlined_secondary{
+    border: 1px solid #BE9429;
+}
+.itemOutlined_info{
 
-/* DARK */
+}
+.itemOutlined_success{
+
+}
+.itemOutlined_warning{
+
+}
+.itemOutlined_error{
+
+}
+
 
 
 

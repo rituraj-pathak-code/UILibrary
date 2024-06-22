@@ -5,11 +5,12 @@
     border-radius: 2px;
     padding:1.2em 0.5em;
     height: 95vh;
-    position: sticky;
+    position: fixed;
+    top: 49px;
     left: 0;
-    top: 0;
     transition: width 0.2s ease;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    background-color: white;
     
 }
 
@@ -18,7 +19,7 @@
 }
 
 .expanded {
-    width: 280px;
+    width: 18%;
 }
 .collapseIcon{
   display: flex;

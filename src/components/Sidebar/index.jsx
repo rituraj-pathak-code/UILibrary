@@ -16,7 +16,7 @@ const Sidebar = ({handleNavigate, collapsible=false}) => {
 
     const SIDEBAR_ITEMS = [
         {
-            label: "Dashboard",
+            label: "Home",
             subMenuItems: [],
             route: "/",
             expanded: false,

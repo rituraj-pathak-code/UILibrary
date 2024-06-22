@@ -9,7 +9,6 @@ const Pagination = ({
   totalRecords = 100,
   handleChange = () => {},
   shape = "default",
-  customDesign = {},
   type = "default",
   disabled = false,
   size = "normal",
@@ -86,8 +85,6 @@ const Pagination = ({
             fill={
               page == 0 || disabled
                 ? "gray"
-                : theme == "dark"
-                ? "white"
                 : "black"
             }
           >
@@ -95,8 +92,8 @@ const Pagination = ({
           </svg>
         </div>
 
-        {theme == "light"
-          ? paginationItems.map((item, index) => (
+
+        {paginationItems.map((item, index) => (
               <span
                 key={index}
                 className={`
@@ -108,29 +105,7 @@ const Pagination = ({
                   ${
                     variant === "outlined" &&
                     item !== "..." &&
-                    styles.itemOutlined
-                  }
-                  ${styles[size]}`}
-                onClick={() =>
-                  typeof item === "number" && !disabled && handleChange(item)
-                }
-              >
-                {item === "..." ? "..." : item + 1}
-              </span>
-            ))
-          : paginationItems.map((item, index) => (
-              <span
-                key={index}
-                className={`
-                  ${disabled ? styles.disabled : styles.items_dark}
-                  ${page == item && styles.defaultType}
-                  ${page == item && disabled && styles.disabledType}
-                  ${page == item && styles[type]}
-                  ${styles[shape]}
-                  ${
-                    variant === "outlined" &&
-                    item !== "..." &&
-                    styles.itemOutlined
+                    styles[`itemOutlined_${type}`]
                   }
                   ${styles[size]}`}
                 onClick={() =>
@@ -140,6 +115,7 @@ const Pagination = ({
                 {item === "..." ? "..." : item + 1}
               </span>
             ))}
+
 
         <div
           className={styles.arrows}
@@ -153,8 +129,6 @@ const Pagination = ({
             fill={
               page == numOfPages || disabled == true
                 ? "gray"
-                : theme == "dark"
-                ? "white"
                 : "black"
             }
           >

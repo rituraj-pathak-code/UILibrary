@@ -32,42 +32,42 @@ const Paginations = () => {
 
   <div className={styles.superContainer}>
     <div className={styles.heading}>
-      <h2>Pagination</h2>
-      <p>
+      <h2 className="headingText">Pagination</h2>
+      <p className="paragraphText">
       A text field lets the user enter text, either with hardware keyboard or with an onscreen keyboard.
       </p>
     </div>
     <div className={styles.container}>
       <div>
-        <h3>Basic Pagination</h3>
+        <h3 className="subHeadingText">Basic Pagination</h3>
         <DisplayCode
           components={basicPaginationArray}
           codeString={`${basicPagination}`}
         />
       </div>
       <div>
-        <h3>Outlined Pagination</h3>
+        <h3 className="subHeadingText">Outlined Pagination</h3>
         <DisplayCode
           components={outlinedPaginationArray}
           codeString={`${basicPagination}`}
         />
       </div>
       <div>
-        <h3>Colored Pagination</h3>
+        <h3 className="subHeadingText">Colored Pagination</h3>
         <DisplayCode
           components={coloredPaginationArray}
           codeString={`${basicPagination}`}
         />
       </div>
       <div>
-        <h3>Sized Pagination</h3>
+        <h3 className="subHeadingText">Sized Pagination</h3>
         <DisplayCode
           components={sizePaginationArray}
           codeString={`${basicPagination}`}
         />
       </div>
       <div>
-        <h3>Disabled Pagination</h3>
+        <h3 className="subHeadingText">Disabled Pagination</h3>
         <DisplayCode
           components={disabledPaginationArray}
           codeString={`${basicPagination}`}

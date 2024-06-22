@@ -3,6 +3,7 @@ import { Box, Grid } from '@mui/material'
 import Sidebar from '../components/Sidebar'
 import { useNavigate } from 'react-router-dom'
 import style from "./index.module.css"
+import Topbar from '../components/Topbar'
 
 const Container = ({ children }) => {
     const navigate= useNavigate()
@@ -12,14 +13,12 @@ const Container = ({ children }) => {
     }
     return (
         <Grid container>
-            <Grid item xs={12} sx={{background:'white', padding:'12px 16px', borderBottom:'1px solid #E8E8E8'}}>
-                TopBar
-            </Grid>
+            <Topbar/>
             <Grid item xs={12} className={style.container}>
                 <Box>
                     <Sidebar handleNavigate={handleNavigate}/>
                 </Box>
-                <Box style={{minWidth:"77%"}}>
+                <Box style={{minWidth:"79%", marginLeft: "18%", marginTop: '60px'}}>
                     {children}
                 </Box>
             </Grid>

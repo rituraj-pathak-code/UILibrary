@@ -1,75 +1,119 @@
 import Button from "../components/Button";
-import trashIcon from '/assets/trash_icon.png'
-import sendIcon from '/assets/send_icon.png'
+
+import { MdOutlineDelete } from "react-icons/md";
+import { IoMdSend } from "react-icons/io";
 
 export const basicButtonsArray = [
     <Button
-      category="primary"
-      borderRadius="normal"
-      size="normal"
       key={1}
+    >
+      Default
+    </Button>,
+    <Button
+      category="primary"
+      key={2}
+    >
+      Primary
+    </Button>,
+       <Button
+       category="secondary"
+       key={3}
+     >
+       Secondary
+     </Button>,
+     <Button
+     category="disabled"
+     key={3}
+   >
+     Disabled
+   </Button>,
+  ];
+
+  export const outlinedButtonsArray =[
+    <Button
+      category="primary"
+      key={1}
+      outlined
+    >
+      Primary
+    </Button>,
+       <Button
+       category="secondary"
+       key={2}
+       outlined
+     >
+       Secondary
+     </Button>,
+      <Button
+      category="warning"
+      key={2}
+      outlined
+    >
+      Warning
+    </Button>,
+     <Button
+     category="error"
+     key={3}
+     outlined
+   >
+     Error
+   </Button>,
+  ];
+  
+  export  const coloredButtonsArray = [
+    <Button
+      key={1}
+    >
+      Default
+    </Button>,
+    <Button
+      category="primary"
+      key={2}
     >
       Primary
     </Button>,
     <Button
       category="secondary"
-      borderRadius="normal"
-      size="normal"
-      key={2}
+      key={3}
     >
       Secondary
     </Button>,
-  ];
-  
-  export  const coloredButtonsArray = [
     <Button
-      category="success"
-      borderRadius="normal"
-      size="normal"
-      key={1}
-    >
-      Warning
-    </Button>,
-    <Button
-      category="danger"
-      borderRadius="normal"
-      size="normal"
-      key={2}
-    >
-      Danger
-    </Button>,
-    <Button
-      category="warning"
-      borderRadius="normal"
-      size="normal"
-      key={3}
-    >
-      Warning
-    </Button>,
-    <Button
-      category="disabled"
-      borderRadius="normal"
-      size="normal"
+      category="info"
       key={4}
     >
-      Disabled
+      Info
     </Button>,
+     <Button
+     category="success"
+     key={5}
+   >
+     Success
+   </Button>,
+    <Button
+    category="warning"
+    key={6}
+  >
+    Warning
+  </Button>,
+   <Button
+   category="error"
+   key={7}
+ >
+   Error
+ </Button>,
   ];
   
   export const iconButtonsArray = [<Button
-    category="danger"
-    startIcon={trashIcon}
-    borderRadius="normal"
-    size="normal"
+    category="error"
+    startIcon={<MdOutlineDelete size={19}/>}
     key={1}
   >
     Delete
   </Button>,
   <Button
     category="primary"
-    endIcon={sendIcon}
-    borderRadius="normal"
-    size="normal"
+    endIcon={<IoMdSend size={16}/>}
     key={2}
   >
     Send
@@ -79,7 +123,6 @@ export const basicButtonsArray = [
   export const sizeButtonsArray = [
     <Button
     category="primary"
-    borderRadius="normal"
     size="large"
     key={1}
   >
@@ -87,7 +130,6 @@ export const basicButtonsArray = [
   </Button>,
   <Button
   category="primary"
-  borderRadius="normal"
   size="normal"
   key={1}
 >
@@ -95,7 +137,6 @@ export const basicButtonsArray = [
 </Button>,
   <Button
   category="primary"
-  borderRadius="normal"
   size="small"
   key={1}
 >

@@ -1,28 +1,35 @@
 import styles from "./index.module.css";
 import {
+  basicButtons,
   buttonWithEndIcon,
   buttonWithStartIcon,
+  coloredButtons,
   dangerButton,
   disabledButton,
+  iconButtons,
+  outlinedButtons,
   primaryButton,
   secondaryButton,
+  sizedButtons,
   successButton,
   warningButton,
 } from "../../constants/buttonStrings";
 import DisplayCode from "../../components/DisplayCode";
 import {
   basicButtonsArray,
+  outlinedButtonsArray,
   coloredButtonsArray,
   iconButtonsArray,
   sizeButtonsArray,
 } from "../../constants/buttonComponents";
 
+
 const Buttons = () => {
   return (
     <div className={styles.superContainer}>
       <div className={styles.heading}>
-        <h2 className="headingText">Buttons</h2>
-        <p className="paragraphText">
+        <h2>Buttons</h2>
+        <p>
           Buttons are interactive elements that users can click to perform
           actions. There are different types of buttons, each with its own
           purpose and behavior
@@ -30,33 +37,41 @@ const Buttons = () => {
       </div>
       <div className={styles.container}>
         <div>
-          <h3 className="subHeadingText">Basic Buttons</h3>
+          <h3>Basic Buttons</h3>
           <DisplayCode
             components={basicButtonsArray}
-            codeString={`${primaryButton}${secondaryButton}`}
+            codeString={`${basicButtons}`}
           />
         </div>
         <div>
-          <h3 className="subHeadingText">Colored Buttons</h3>
+          <h3>Colored Buttons</h3>
           <DisplayCode
             components={coloredButtonsArray}
-            codeString={`${successButton}${dangerButton}${warningButton}${disabledButton}`}
+            codeString={`${coloredButtons}`}
           />
         </div>
         <div>
-          <h3 className="subHeadingText">Buttons with icons</h3>
+          <h3>Outlined Buttons</h3>
           <DisplayCode
-            components={iconButtonsArray}
-            codeString={`${buttonWithStartIcon}${buttonWithEndIcon}`}
+            components={outlinedButtonsArray}
+            codeString={`${outlinedButtons}`}
           />
         </div>
         <div>
-          <h3 className="subHeadingText">Buttons Sizes</h3>
+          <h3>Buttons Sizes</h3>
           <DisplayCode
             components={sizeButtonsArray}
-            codeString={`${buttonWithStartIcon}${buttonWithEndIcon}`}
+            codeString={`${sizedButtons}`}
           />
         </div>
+        <div>
+          <h3>Buttons with icons</h3>
+          <DisplayCode
+            components={iconButtonsArray}
+            codeString={`${iconButtons}`}
+          />
+        </div>
+       
       </div>
     </div>
   );
