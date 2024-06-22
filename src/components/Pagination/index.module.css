@@ -17,61 +17,74 @@
     border-radius: 4px;
     
 }
-.items_dark{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background: transparent;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 4px;
-    color: white;
+.item_disabled{
+    color: gray;
 }
+
 .items:hover{
     background-color: #eeeeee;
 }
-.items_dark:hover{
-    background-color: #4a4a4a;
-
-}
-.disabled{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background: transparent;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 4px;
-    color: gray
-}
-.defaultType,.defaultType:hover{
-    background-color: rgb(112, 112, 112);
+.activeItem_,.activeItem_:hover{
+    background-color: rgb(178, 178, 178);
     color: white;
 }
-.disabledType, .disabledType:hover{
-    background-color: rgb(196, 196, 196);
+.activeItem_primary, .activeItem_primary:hover{
+    background-color: #00A76F;
+    color: white;
+}
+.activeItem_secondary, .activeItem_secondary:hover{
+    background-color: #8E33FF;
+    color: white;
+}
+.activeItem_info, .activeItem_info:hover{
+    background-color: #00B8D9;
+    color: white;
+}
+.activeItem_success, .activeItem_success:hover{
+    background-color: #22C55E;
+    color: white;
+}
+.activeItem_warning, .activeItem_warning:hover{
+    background-color: #FFAB00;
+    color: white;
+}
+.activeItem_error, .activeItem_error:hover{
+    background-color: #FF5630;
+    color: white;
+}
+.activeItem_disabled, .activeItem_disabled:hover{
+    background-color: rgb(211, 211, 211);
     color: gray;
 }
-.primary , .primary:hover{
-    background-color: #6365f16f;
-}
 
-.secondary, .secondary:hover{
-    background-color: #BE9429;
-    color: white;
-   
-}
-
-
-.rounded {
+.rounded{
     border-radius: 50%;
 }
+.outlined_{
+    border: 1px solid rgb(152, 152, 152);
+}
+.outlined_primary{
+    border: 1px solid #00A76F;
+}
+.outlined_secondary{
+    border: 1px solid #8E33FF;
+}
+.outlined_success{
+    border: 1px solid #22C55E;
+}
+.outlined_info{
+    border: 1px solid #00B8D9;
+}
+.outlined_warning{
+    border: 1px solid #FFAB00;
+}
+.outlined_error{
+    border: 1px solid #FF5630;
+}
+.outlined_disabled{
+    border: 1px solid rgb(191, 191, 191);
+}
+
 .large{
     width: 38px;
     height: 38px;
@@ -81,30 +94,6 @@
     height: 24px;
     font-size: 0.8em;
 }
-.itemOutlined_{
-    border: 1px solid rgb(88, 88, 88);
-}
-.itemOutlined_primary{
-    border: 1px solid #6365f16f;
-}
-.itemOutlined_secondary{
-    border: 1px solid #BE9429;
-}
-.itemOutlined_info{
-
-}
-.itemOutlined_success{
-
-}
-.itemOutlined_warning{
-
-}
-.itemOutlined_error{
-
-}
-
-
-
 
 
 
@@ -114,7 +103,6 @@
     align-items: center;
     justify-content: center;
 }
-
 
 
 

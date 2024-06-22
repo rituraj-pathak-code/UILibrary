@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
 import { getBackgroundColor, getBrightness } from "../../utils/getUserTheme";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 
 
 const Pagination = ({
@@ -8,14 +9,14 @@ const Pagination = ({
   pageLimit = 10,
   totalRecords = 100,
   handleChange = () => {},
-  shape = "default",
-  type = "default",
+  outlined,
+  rounded,
+  category = "",
   disabled = false,
   size = "normal",
-  variant = "",
+ 
 }) => {
-  const componentRef = useRef(null);
-  const [theme, setTheme] = useState("");
+
   const numOfPages = Math.ceil(totalRecords / pageLimit);
 
   const handlePrevPage = () => {
@@ -56,40 +57,15 @@ const Pagination = ({
     return pages;
   };
 
-  useEffect(() => {
-    const component = componentRef.current;
-    console.log(component);
-    if (component) {
-      const backgroundColor = getBackgroundColor(component.parentElement);
-      console.log(backgroundColor);
-      const brightness = getBrightness(backgroundColor);
-      brightness == null
-        ? setTheme("light")
-        : brightness > 127.5
-        ? setTheme("light")
-        : setTheme("dark");
-    }
-  }, []);
-
   const paginationItems = getPaginationItems();
+
+  
 
   return (
     <>
-      <div className={`${styles.container}`} ref={componentRef}>
-        <div className={styles.arrows} onClick={!disabled && handlePrevPage}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="17"
-            viewBox="0 0 24 24"
-            fill={
-              page == 0 || disabled
-                ? "gray"
-                : "black"
-            }
-          >
-            <polygon points="15.293 3.293 6.586 12 15.293 20.707 16.707 19.293 9.414 12 16.707 4.707 15.293 3.293" />
-          </svg>
+      <div className={`${styles.container}`}>
+        <div className={styles.arrows} onClick={category!=='disabled' && handlePrevPage}>
+          <FaAngleLeft color={page == numOfPages || category=='disabled' ? "gray": "black"}/>
         </div>
 
 
@@ -97,19 +73,15 @@ const Pagination = ({
               <span
                 key={index}
                 className={`
-                  ${disabled ? styles.disabled : styles.items}
-                  ${page == item && styles.defaultType}
-                  ${page == item && disabled && styles.disabledType}
-                  ${page == item && styles[type]}
-                  ${styles[shape]}
-                  ${
-                    variant === "outlined" &&
-                    item !== "..." &&
-                    styles[`itemOutlined_${type}`]
-                  }
-                  ${styles[size]}`}
+                  ${styles.items}
+                  ${category=='disabled' && styles.item_disabled}
+                  ${page == item && styles[`activeItem_${category}`]}
+                  ${rounded ? styles.rounded : ''}
+                  ${outlined ? styles[`outlined_${category}`] : ''}
+                  ${styles[size]}
+                `}
                 onClick={() =>
-                  typeof item === "number" && !disabled && handleChange(item)
+                  typeof item === "number" && category!=='disabled' && handleChange(item)
                 }
               >
                 {item === "..." ? "..." : item + 1}
@@ -117,23 +89,8 @@ const Pagination = ({
             ))}
 
 
-        <div
-          className={styles.arrows}
-          onClick={disabled !== true && handleNextPage}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="17"
-            viewBox="0 0 24 24"
-            fill={
-              page == numOfPages || disabled == true
-                ? "gray"
-                : "black"
-            }
-          >
-            <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707" />
-          </svg>
+        <div className={styles.arrows} onClick={category!=='disabled' && handleNextPage}>
+            <FaAngleRight color={page == numOfPages || category=='disabled' ? "gray": "black"}/>
         </div>
       </div>
     </>
