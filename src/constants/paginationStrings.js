@@ -18,10 +18,10 @@ const pageChangeHandler = (index) => {
 }
 <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='primary' outlined  />
 <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='secondary' outlined rounded />
-<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='success' />
-<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='info' rounded />
-<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='warning' outlined />
-<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='error' outlined rounded />`
+<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='success' outlined />
+<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='info' />
+<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='warning' rounded />
+<Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='error' />`
 
 export const sizedPagination = `const [page, setPage] = useState(0)
 const pageChangeHandler = (index) => {

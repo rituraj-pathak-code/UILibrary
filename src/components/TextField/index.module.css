@@ -2,75 +2,97 @@
     width: 360px;
     /* height: 40px; */
     background-color: white;
-    border: 2px solid #D0D1FB;
+    border: 1px solid #8e8e8e;
     border-radius: 4px;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
-   
-}
-
-.container_start{
-    padding-left: 12px;
-    width: 347px;
-}
-.container_end{
-    padding-right: 12px;
-    width: 347px;
-}
-.container_both{
-width: 335px;
-}
-
-
-.container_normal{
-    border-radius: 12px;
-}
-.container_full{
-    border-radius: 64px;
+    align-items: center; 
+ 
 }
 .container:hover{
-    border: 2px solid #A1A3F7
-}
-.container.focused {
-    border-color: #6366F1;
-  }
-  .success{
-    border: 2px solid #3b875fe3;
-  }
-  .warning{
-    border: 2px solid #BE9429;
-  }
-  .error{
-    border: 2px solid #CD2026;
-  }
-  .icon{
-    width: 13px;
-  }
-  .container_disabled, .container_disabled:hover, .container_disabled:focus{
-    background-color: white;
-    border: 2px solid #868686;
-    color: #DBDBDB;
+  border: 1px solid #1C252E;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px; */
 }
 .input{
-    width: 95%;
-    padding :10px 12px 10px 12px;
-    font-size: 16px;
-    border: none;
+  width: 95%;
+  padding :7px 12px 7px 12px;
+  font-size: 14px;
+  color: rgb(50, 50, 50);
+  border: none;
 }
 .input:focus{
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
-.errorStatement{
-    color: red;
-    font-size: 14px;
-    padding-left: 5px;
+.small{
+  padding :4px 10px 4px 10px;
+  font-size: 13px;
+}
+.large{
+  padding :10px 12px 10px 12px;
+  font-size: 16px;
 }
 
 ::placeholder {
     font-size: 14px;
     color: rgb(185, 185, 185);
   }
+
+  .primary{
+    border-color: #00A76F;
+ }
+ .primary:hover{
+    border-color: rgb(95, 230, 185);
+  }
+ .secondary{
+    border-color: #8E33FF;
+ }
+ .secondary:hover{
+  border-color: rgb(192, 140, 255);
+
+ }
+ .disabled,  .disabled:hover{
+  border-color: #E2E5E9;
+    /* color: #b5b5b5;
+    cursor: not-allowed;
+    box-shadow: none */
+
+ }
+ .info{
+  border-color: #00B8D9;
+ }
+ .info:hover{
+  border-color: rgb(86, 230, 255);
+
+
+ }
+ .success{
+  border-color: #22C55E;
+ }
+ .success:hover{
+  border-color: rgb(68, 250, 135);
+
+
+ }
+ .warning{
+  border-color: #FFAB00;
+ }
+ .warning:hover{
+  border-color: rgb(255, 209, 118);
+
+
+ }
+ .error{
+  border-color: #FF5630;
+ }
+ .error:hover{
+  border-color: rgb(247, 146, 123);
+ }
+ .start_icon{
+  padding-inline: 10px 0px; 
+ }
+ .end_icon{
+  padding-inline: 10px;
+  cursor: pointer;
+ }

@@ -20,10 +20,10 @@ const Paginations = () => {
   const coloredPaginationArray = [
     <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='primary' outlined key={1} />,
     <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='secondary' outlined rounded key={2}/>,
-    <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='success' key={3}/>,
-    <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='info' rounded key={4}/>,
-    <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='warning' outlined key={5}/>,
-    <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='error' outlined rounded key={6}/>,
+    <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='success' outlined key={3}/>,
+    <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='info' key={4}/>,
+    <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='warning' rounded key={5}/>,
+    <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} category='error' key={6}/>,
   ]
   const sizePaginationArray = [
     <Pagination page = {page} pageLimit={10} totalRecords={100} handleChange={pageChangeHandler} size='large' category='primary' key={1} />,
