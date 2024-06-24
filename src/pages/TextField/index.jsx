@@ -1,6 +1,6 @@
 import styles from './index.module.css'
 import DisplayCode from '../../components/DisplayCode'
-import { basicTextFieldArray, coloredTextFieldArray, errorTextFieldArray } from '../../constants/textFieldComponents'
+import { basicTextFieldArray, coloredTextFieldArray, errorTextFieldArray, sizeTextFieldArray } from '../../constants/textFieldComponents'
 import { errorTextField, passwordTextField, primaryTextField, successTextField, warningTextField } from '../../constants/textFieldStrings'
 
 
@@ -29,9 +29,9 @@ const TextFieldPage = () => {
         />
       </div>
       <div>
-        <h3>TextField with error message</h3>
+        <h3>Sized TextField</h3>
         <DisplayCode
-          components={errorTextFieldArray}
+          components={sizeTextFieldArray}
           codeString={`${errorTextField}`}
         />
       </div>

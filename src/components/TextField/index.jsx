@@ -7,12 +7,10 @@ import passwordIconCrossed from '/assets/eye_crossed.png'
 
 const TextField = ({
   type = "text",
+  category = "",
+  size,
   placeholder = "",
-  rounded,
   name = "",
-  color = "",
-  startIcon,
-  endIcon,
   width,
   background,
   value,
@@ -22,6 +20,8 @@ const TextField = ({
   textColor,
   errorMessage,
   onChange = () => {},
+  startIcon ,
+  endIcon,
   ...props
 }) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -39,19 +39,12 @@ console.log({inputType})
     <div>
     <div
       style={{width:width, background:background}}
-      className={`${styles.container} 
-      ${startIcon && (endIcon || type=='password') && styles.container_both
-      } ${startIcon && styles.container_start} ${
-        (endIcon || type=='password') && styles.container_end
-      } ${styles[color]} ${disabled && styles.container_disabled} ${
-        isFocused ? styles.focused : ""
-      } ${rounded == "normal" && styles.container_normal} ${
-        rounded == "full" && styles.container_full
-      }`}
+      className={`${styles.container} } 
+      ${styles[category]}
+      `}
     >
-      {startIcon  && (
-        <img src={startIcon} alt="" className={styles.icon} />
-      )}
+       {startIcon && <span className={styles.start_icon}>{startIcon}</span>}
+    
       <input
         type={inputType}
         value={value}
@@ -61,23 +54,17 @@ console.log({inputType})
         placeholder={placeholder}
         readOnly={readOnly}
         onChange={(e) => onChange(e)}
-        className={styles.input}
+        className={`${styles.input}  ${styles[size]}`}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         style={{background:background, color:textColor}}
         {...props}
       />
-      {endIcon && type!=='password' && (
-        <img src={endIcon} alt="" className={styles.icon} />
-      )}
-      {inputType == "password" && type=='password' && (
-        <img src={passwordIcon} style={{cursor:'pointer'}} alt="" className={styles.icon} onClick={togglePassword} />
-      )}
-      {inputType == "text" && type=='password' && (
-        <img src={passwordIconCrossed} style={{cursor:'pointer'}} alt="" className={styles.icon} onClick={togglePassword} />
-      )}
+
+      {endIcon && <span className={styles.end_icon}>{endIcon}</span>}
+     
     </div>
-    {errorMessage && <span className={styles.errorStatement}>{errorMessage}</span>}
+    {/* {errorMessage && <span className={styles.errorStatement}>{errorMessage}</span>} */}
    
     </div>
   );
