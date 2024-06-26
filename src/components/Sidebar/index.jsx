@@ -92,6 +92,13 @@ const Sidebar = ({handleNavigate, collapsible=false}) => {
             route: "/dropdown",
             expanded: false,
             icon: "icon"
+        },
+        {
+            label: "Stepper",
+            subMenuItems: [],
+            route: "/stepper",
+            expanded: false,
+            icon: "icon"
         }
     ]
     return (
