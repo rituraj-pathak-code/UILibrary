@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
 import Button from "../Button/";
-import { FaCheck } from "react-icons/fa6";
 
 const Stepper = ({ steps = [] }) => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -44,6 +43,10 @@ const Stepper = ({ steps = [] }) => {
         return prev - 1;
       }
     });
+  };
+  const handleReset = () => {
+    setCurrentStep(1);
+    setIsCompleted(false);
   };
 
   const calculateProgressbarWidth = () => {
@@ -100,12 +103,15 @@ const Stepper = ({ steps = [] }) => {
           {"Back"}
         </Button>
 
-        <Button
-          onClick={handleNext}
-          category={isCompleted ? "disabled" : "primary"}
-        >
-          {currentStep == steps.length ? "Finish" : "Next"}
-        </Button>
+        {!isCompleted ? (
+          <Button onClick={handleNext} category={"primary"}>
+            {currentStep == steps.length ? "Finish" : "Next"}
+          </Button>
+        ) : (
+          <Button onClick={handleReset} category={"error"}>
+            {"Reset"}
+          </Button>
+        )}
       </div>
     </>
   );

@@ -18,7 +18,7 @@ const Container = ({ children }) => {
                 <Box>
                     <Sidebar handleNavigate={handleNavigate}/>
                 </Box>
-                <Box style={{minWidth:"79%", marginLeft: "18%", marginTop: '60px'}}>
+                <Box style={{minWidth:"79%", marginInline: "18%", marginTop: '60px'}}>
                     {children}
                 </Box>
             </Grid>

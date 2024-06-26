@@ -34,6 +34,7 @@ const CodeHighlight = ({ codeString }) => {
           padding: "10px",
           margin: "0",
           textAlign: "left",
+          maxHeight: "400px",
         }}
         codeTagProps={{
           style: {

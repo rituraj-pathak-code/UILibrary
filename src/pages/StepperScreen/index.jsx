@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 import DisplayCode from '../../components/DisplayCode'
 import { basicStepperArray } from '../../constants/stepperComponent'
-import { simpleStepper } from '../../constants/stepperStrings'
+import { simpleStepper, stepperStyles } from '../../constants/stepperStrings'
 
 
 
@@ -20,9 +20,14 @@ const StepperScreen = () => {
         <div className={styles.component}>
             {basicStepperArray[0]}
         </div>
-        <DisplayCode
-          codeString={`${simpleStepper}`}
-        />
+        <div className={styles.displaycode}>
+          <DisplayCode
+            codeString={`${simpleStepper}`}
+          />
+          <DisplayCode
+            codeString={`${stepperStyles}`}
+          />
+        </div>
       </div>
       
     </div>

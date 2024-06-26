@@ -13,7 +13,7 @@ const DisplayCode = ({ components = [], codeString = "" }) => {
         </div>
       )}
 
-      <div>
+      <div className={styles.highlight}>
         <CodeHighlight codeString={codeString} />
       </div>
     </div>

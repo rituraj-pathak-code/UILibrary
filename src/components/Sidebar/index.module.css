@@ -63,19 +63,14 @@
     width: 100%;
 }
 .sidebarDivwithIcons:hover {
-    background: #e2c8ff;
-    color: #ffffff;
+    background: #f3f3f3;
 }
 .activeMenu{
-    background: #b87aff;
-    color: white;
+    background: #b87aff34;
+    color: #b87aff;
 }
-.sidebar_icon{
-    width: 16px;
+.activeMenu.sidebarDivwithIcons:hover{
+    background: #b87aff4d;
+    color: #b87aff;
+
 }
-.sidebarDivwithIcons:hover .sidebar_icon{
-    filter: invert(1);
-}
-.sidebarBox:has(.activeMenu) .sidebar_icon {
-    filter: invert(1)
-  }

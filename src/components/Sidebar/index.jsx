@@ -5,7 +5,7 @@ import upArrow from "../../assets/icons/upArrow.svg"
 import style from "./index.module.css"
 import sidebarOpen from '/assets/sidebar_open.png'
 import sidebarClose from '/assets/sidebar_close.png'
-import sidebarArrow from '/assets/sidebar_arrow.png'
+import { FaAngleRight } from "react-icons/fa";
 
 const Sidebar = ({handleNavigate, collapsible=false}) => {
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -112,7 +112,7 @@ const Sidebar = ({handleNavigate, collapsible=false}) => {
             {SIDEBAR_ITEMS?.map((item, key) =>
                 <div className={style.sidebarBox} key={key}>
                     <div className={`${style.sidebarDivwithIcons} ${window.location.pathname == item.route && style.activeMenu}`} onClick={()=>{handleNavigate(item,key)}}>
-                        <img src={sidebarArrow} className={style.sidebar_icon} alt="dashIcon" />
+                        <span><FaAngleRight/></span>
                         {!isCollapsed && <p className={style.navItem} >{item.label}</p>}
                     </div>
                     {!isCollapsed && item?.subMenuItems?.length > 0 && <div >
