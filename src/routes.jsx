@@ -10,6 +10,7 @@ import RadioButtons from "./pages/RadioButtons";
 import CheckBoxes from "./pages/CheckBoxes";
 import PopUpScreen from './pages/PopUpScreen'
 import DropdownScreen from "./pages/DropdownScreen";
+import StepperScreen from "./pages/StepperScreen";
 
 const RoutesHandler = [
     {
@@ -70,6 +71,11 @@ const RoutesHandler = [
     {
         component: <DropdownScreen />,
         path: "/dropdown",
+        isLoading: true,
+    },
+    {
+        component: <StepperScreen />,
+        path: "/stepper",
         isLoading: true,
     }
 ]
